@@ -29,6 +29,9 @@ open class ImageSlideshowItem: UIScrollView, UIScrollViewDelegate {
 
         imageView.clipsToBounds = true
         imageView.isUserInteractionEnabled = true
+        imageView.layer.minificationFilter = kCAFilterTrilinear
+        imageView.layer.shouldRasterize = true
+        imageView.layer.rasterizationScale = UIScreen.main.scale
         
         setPictoCenter()
         
